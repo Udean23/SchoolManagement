@@ -1,22 +1,16 @@
 <?php
 
-namespace App\DisscusionRoom\Models;
+namespace App\Task\Models;
 
-use App\Auth\Models\Auth;
 use App\Session\Models\Session;
 use Illuminate\Database\Eloquent\Model;
 
-class DisscusionRoom extends Model
+class TaskSubmission extends Model
 {
     protected $guarded = [];
 
     public function Session()
     {
         return $this->belongsTo(Session::class);
-    }
-
-    public function User()
-    {
-        return $this->belongsTo(Auth::class);
     }
 }
